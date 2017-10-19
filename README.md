@@ -1,8 +1,7 @@
 # HttpUtil
 Helpful HTTP fetcher utility service 
 
-[![Build Status]([![Build Status](your travis url for the repo here.png)](your travis url for the repo here)
-)](https://travis-ci.org/ramesh-dev/HttpUtil)
+[![Build Status](https://travis-ci.org/ramesh-dev/HttpUtil.svg?branch=master)](https://travis-ci.org/ramesh-dev/HttpUtil)
 
 ## How to Download ?
 
