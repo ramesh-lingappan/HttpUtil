@@ -6,6 +6,7 @@ import com.httputil.model.HttpResponse;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
@@ -63,11 +64,19 @@ public class UrlFetcher {
             }
         }
 
+        InputStream is = null;
         StringBuffer responseContent = null;
 
-        if (conn.getInputStream() != null){
+        try {
+            is = conn.getInputStream();
+        } catch (IOException e) {
+            if (conn.getResponseCode() != 200) {
+                is = conn.getErrorStream();
+            }
+        }
 
-            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+        if (is != null) {
+            BufferedReader in = new BufferedReader(new InputStreamReader(is));
 
             String inputLine;
             responseContent = new StringBuffer();
@@ -88,5 +97,4 @@ public class UrlFetcher {
 
         return httpResponse;
     }
-
 }

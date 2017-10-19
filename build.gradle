@@ -1,8 +1,7 @@
 group 'com.rameshl'
-version '1.0-SNAPSHOT'
+version '1.0.1'
 
 apply plugin: 'java'
-apply plugin: 'maven'
 
 sourceCompatibility = 1.7
 
@@ -13,5 +12,5 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
-    compile "org.projectlombok:lombok:1.16.6"
+    compile 'org.projectlombok:lombok:1.16.18'
 }
