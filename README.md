@@ -1,6 +1,8 @@
 # HttpUtil
 Helpful HTTP fetcher utility service 
 
+[![Build Status](https://travis-ci.org/ramesh-dev/HttpUtil.svg?branch=master)](https://travis-ci.org/ramesh-dev/HttpUtil)
+
 ## How to Download ?
 
 - currently you can manually download the jar file here [Download Jar File](https://github.com/ramesh-dev/HttpUtil/tree/master/release)
